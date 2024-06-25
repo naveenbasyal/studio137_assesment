@@ -2,8 +2,8 @@
 
 ## Output
 
-![image1](public/image.png)
-![image2](public/image.png)
+![image1](public/image1.png)
+![image2](public/image2.png)
 
 ```
 
