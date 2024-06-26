@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 
@@ -64,6 +64,13 @@ const Index = () => {
       },
     });
   };
+  useEffect(() => {
+    console.log("answer triggered");
+    setTimeout(() => {
+      if (answers[currentModule]?.[currentQuestion] === undefined) return;
+      handleNext();
+    }, 500);
+  }, [answers]);
 
   const handleNext = () => {
     if (answers[currentModule]?.[currentQuestion] === undefined)
